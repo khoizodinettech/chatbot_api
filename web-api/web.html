@@ -8,6 +8,7 @@
   <body>
     <h1>Quản lý User</h1>
     <form id="form">
+      <input type="hidden" id="edit_id" name="edit_id" />
       <label for="first_name">First Name:</label>
       <input type="text" id="first_name" name="firstName" required />
       <br />
@@ -20,9 +21,22 @@
       <label for=" avatar">Avatar:</label>
       <input type="url" id="avatar" name="avatar" required />
       <br />
-      <button type="submit">Create User</button>
+      <!-- <button type="submit">Create User</button> -->
+      <button type="button" onclick="editUser()">Edit User</button>
     </form>
-    <table id="users"></table>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Avatar</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="users"></tbody>
+    </table>
     <script src="/web-api/web.js"></script>
   </body>
 </html>
